@@ -16,7 +16,7 @@ data "aws_ami" "ec2" {
 
   filter {
     name   = "name"
-    values = ["Amazon Linux 2023 AMI*"]
+    values = ["amzn2-ami-kernel-5.10-hvm-2.0.20230307.0-x86_64-gp2"]
   }
 
   filter {
@@ -31,7 +31,7 @@ resource "aws_instance" "web" {
   ami           = data.aws_ami.ec2.id
   instance_type = "t2.micro"
   key_name = "linux-calismalar"
-  security_groups = [ "kittins" ]
+  vpc_security_group_ids = [aws_security_group.kittins.id]
   user_data =  file("${path.module}/user-data.sh")
 
   tags = {
