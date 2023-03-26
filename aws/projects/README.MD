@@ -12,5 +12,7 @@ List of projects within AWS workshop as follows;
 
 5. - [Project-503 : Capstone Project Blog Page App (Django) on AWS Environment](./Project-503-Capstone-Project-Blog-Page-App-(Django)-on-AWS-Environment/README.md)  -->
 
+tekralanacak
+
 
 
